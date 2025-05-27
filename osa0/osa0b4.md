@@ -1,10 +1,7 @@
 sequenceDiagram
-
   participant browser
   participant server
-  
   browser->>server: POST https://studies.cs.helsinki.fi/exampleapp/new_note
-  
   server-->>browser: 302 Found, redirect /notes
   browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/notes
   server-->>browser: HTML document
